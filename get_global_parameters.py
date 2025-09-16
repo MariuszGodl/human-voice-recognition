@@ -12,6 +12,7 @@ PATH_RAW_DATASET = 'data/raw/'
 PATH_PROCESSED_PARAMETERS = 'data/processed/'
 PATH_LABEL = 'data/processed/labels.csv'
 SAMPLE_RATE = 16000 # Hz
+NFFT = 512
 
 def normalize_audio(audio):
     return audio / np.max(np.abs(audio)) if np.max(np.abs(audio)) > 0 else audio
@@ -61,11 +62,11 @@ for dataset in os.listdir(PATH_RAW_DATASET):
 
                             word_audio = audio_sample[start:end]
 
-                            if len(word_audio) < 2048: 
+                            if len(word_audio) < NFFT: 
                                 continue
                             word_audio = normalize_audio(word_audio)
                             
-                            mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13)
+                            mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13, n_fft=NFFT)
 
                             # update global sums
                             if global_sum is None:

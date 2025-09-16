@@ -3,6 +3,7 @@ from RemovePolichChars import strip_polish_chars
 import pandas as pd
 import numpy as np
 import librosa
+import string
 import torch
 import os
 from time import sleep
@@ -11,6 +12,7 @@ PATH_RAW_DATASET = 'data/raw/'
 PATH_PROCESSED_DATA = 'data/processed'
 PATH_LABEL = 'data/processed/labels.csv'
 SAMPLE_RATE = 16000 # Hz
+NFFT = 512
 
 def normalize_audio(audio):
     return audio / np.max(np.abs(audio)) if np.max(np.abs(audio)) > 0 else audio
@@ -20,6 +22,15 @@ def seconds_to_samples(start, end, sr):
     sample_start = int(start * sr)
     sample_end = int(end * sr)
     return sample_start, sample_end
+
+def check_if_word_contains_illegal_chars(word):
+    # allowed characters: English letters (a–z, A–Z) and maybe apostrophes/hyphens if you want
+    allowed_chars = set(string.ascii_letters + "'-")
+    
+    for char in word:
+        if char not in allowed_chars:
+            return True  # illegal character found
+    return False  # all characters are valid
 
 stats = np.load(os.path.join(PATH_PROCESSED_DATA, "mfcc_norm_stats.npz"))
 mean = stats["mean"]
@@ -54,18 +65,19 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                             if interval.maxTime - interval.minTime < 0.05 or interval.mark == '':
                                 continue
        
-
+                            if check_if_word_contains_illegal_chars(interval.mark):  
+                                continue
                             start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
                             
                             word = strip_polish_chars(interval.mark)
-
+                            print(textgrid_file, word)
                             word_audio = audio_sample[start:end]
-                            if len(word_audio) < 2048: 
+                            if len(word_audio) < NFFT: 
                                 continue
 
                             word_audio = normalize_audio(word_audio)
                             
-                            mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13)
+                            mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13, n_fft=NFFT)
                             mfcc_norm = (mfcc - mean[:, None]) / std[:, None]
                             mfcc_tensor = torch.tensor(mfcc_norm)
 
@@ -98,9 +110,28 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                         
                         #sleep(10)
 
+# Human_voice_processing on  main [!] via  v3.12.3 (venv) 
+# ❯ find data/processed/words/ -type f | wc -l
+# 88305
 
-#first create word recognition
+# Human_voice_processing on  main [!] via  v3.12.3 (venv) 
+# ❯ find data/processed/words/ -type d | wc -l
+# 7996
 
-
-#second word splitter
-
+# ❯ tree -L 2
+# .
+# ├── data
+# │   ├── processed
+# │   └── raw
+# ├── dataprocessing.py
+# ├── get_global_parameters.py
+# ├── __pycache__
+# │   └── RemovePolichChars.cpython-312.pyc
+# ├── RemovePolichChars.py
+# └── venv
+#     ├── bin
+#     ├── include
+#     ├── lib
+#     ├── lib64 -> lib
+#     ├── pyvenv.cfg
+#     └── share
