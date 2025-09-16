@@ -13,7 +13,9 @@ PATH_PROCESSED_DATA = 'data/processed'
 PATH_LABEL = 'data/processed/labels.csv'
 SAMPLE_RATE = 16000 # Hz
 NFFT = 512
+HOP_LENGTH = 256
 
+# add spectrographs
 def normalize_audio(audio):
     return audio / np.max(np.abs(audio)) if np.max(np.abs(audio)) > 0 else audio
 
@@ -57,19 +59,25 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                         tg = TextGrid.fromFile(textgrid_file)
                         size = len(tg[0].intervals)
 
-                        labels = [[0 for x in range(5)] for y in range(size)] 
+                        labels = [[0 for x in range(4)] for y in range(size)] 
                         audio_sample, sr = librosa.load(wav_file, sr=SAMPLE_RATE)
 
                         for i, interval in enumerate(tg[0].intervals):
-
-                            if interval.maxTime - interval.minTime < 0.05 or interval.mark == '':
+                            duration = interval.maxTime - interval.minTime
+                            if duration < 0.05 or interval.mark == '':
                                 continue
        
                             if check_if_word_contains_illegal_chars(interval.mark):  
                                 continue
                             start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
-                            
+                            # strip from -
+                            # think about adding chatgtp api to tell if it is accualy a polish word 
+                            # but rather for folder creation not for each entry, and store it for further usage names 
+                            # not appproved by api to classify them by hand and if necessery add redirection to diffrent folder
+            
                             word = strip_polish_chars(interval.mark)
+
+                            #add spectrographs for better model quality
                             print(textgrid_file, word)
                             word_audio = audio_sample[start:end]
                             if len(word_audio) < NFFT: 
@@ -99,16 +107,15 @@ for dataset in os.listdir(PATH_RAW_DATASET):
 
                             labels[i][0]=tag
                             labels[i][1]=word
-                            labels[i][2]=author
-                            labels[i][3]=start / SAMPLE_RATE
-                            labels[i][4]=end / SAMPLE_RATE
+                            labels[i][2]=duration
+                            labels[i][3]=author
 
                         with open(PATH_LABEL, 'a') as file:
                             for row in labels:
                                 if row[0] != 0:
-                                    file.write(f"{row[0]}|{row[1]}|{row[2]}|{row[3]}|{row[4]}\n")
+                                    file.write(f"{row[0]}|{row[1]}|{row[2]}|{row[3]}\n")
                         
-                        #sleep(10)
+
 
 # Human_voice_processing on  main [!] via  v3.12.3 (venv) 
 # ❯ find data/processed/words/ -type f | wc -l
