@@ -1,3 +1,4 @@
+
 from textgrid import TextGrid
 from RemovePolichChars import strip_polish_chars
 import pandas as pd
@@ -8,7 +9,7 @@ import os
 from time import sleep
 
 PATH_RAW_DATASET = 'data/raw/'
-PATH_PROCESSED_DATA = 'data/processed'
+PATH_PROCESSED_PARAMETERS = 'data/processed/'
 PATH_LABEL = 'data/processed/labels.csv'
 SAMPLE_RATE = 16000 # Hz
 
@@ -21,11 +22,11 @@ def seconds_to_samples(start, end, sr):
     sample_end = int(end * sr)
     return sample_start, sample_end
 
-stats = np.load(os.path.join(PATH_PROCESSED_DATA, "mfcc_norm_stats.npz"))
-mean = stats["mean"]
-std = stats["std"]
+global_sum = None
+global_sq_sum = None
+total_frames = 0
 
-
+k=0
 for dataset in os.listdir(PATH_RAW_DATASET):
     path_set = os.path.join(PATH_RAW_DATASET, dataset, dataset)
 
@@ -46,7 +47,7 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                         tg = TextGrid.fromFile(textgrid_file)
                         size = len(tg[0].intervals)
 
-                        labels = [[0 for x in range(5)] for y in range(size)] 
+                        labels = [[0 for x in range(3)] for y in range(size)] 
                         audio_sample, sr = librosa.load(wav_file, sr=SAMPLE_RATE)
 
                         for i, interval in enumerate(tg[0].intervals):
@@ -54,53 +55,37 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                             if interval.maxTime - interval.minTime < 0.05 or interval.mark == '':
                                 continue
        
-
                             start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
                             
                             word = strip_polish_chars(interval.mark)
 
                             word_audio = audio_sample[start:end]
+
                             if len(word_audio) < 2048: 
                                 continue
-
                             word_audio = normalize_audio(word_audio)
                             
                             mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13)
-                            mfcc_norm = (mfcc - mean[:, None]) / std[:, None]
-                            mfcc_tensor = torch.tensor(mfcc_norm)
 
-                            word_folder_path = os.path.join(PATH_PROCESSED_DATA, 'words', word)
-                            nr_of_occurances = 0
-                            tag = word + '_' + str(nr_of_occurances) + '.pt'
-
-                            if os.path.exists(word_folder_path):
-
-                                nr_of_occurances = len(os.listdir(word_folder_path))
-                                tag = word + '_' + str(nr_of_occurances) + '.pt'
-                                tensor_file_name = os.path.join(word_folder_path, tag)
-
+                            # update global sums
+                            if global_sum is None:
+                                global_sum = np.sum(mfcc, axis=1)
+                                global_sq_sum = np.sum(mfcc ** 2, axis=1)
                             else:
-                                os.makedirs(word_folder_path)
-                                tensor_file_name = os.path.join(word_folder_path, tag)
+                                global_sum += np.sum(mfcc, axis=1)
+                                global_sq_sum += np.sum(mfcc ** 2, axis=1)
 
-                            torch.save(mfcc_tensor, tensor_file_name)
+                            total_frames += mfcc.shape[1]
+                            k+=1
+                            print(k)
 
-                            labels[i][0]=tag
-                            labels[i][1]=word
-                            labels[i][2]=author
-                            labels[i][3]=start / SAMPLE_RATE
-                            labels[i][4]=end / SAMPLE_RATE
+global_mean = global_sum / total_frames
+global_var = (global_sq_sum / total_frames) - (global_mean ** 2)
+global_std = np.sqrt(global_var)
 
-                        with open(PATH_LABEL, 'a') as file:
-                            for row in labels:
-                                if row[0] != 0:
-                                    file.write(f"{row[0]}|{row[1]}|{row[2]}|{row[3]}|{row[4]}\n")
-                        
-                        #sleep(10)
+                
+np.savez(os.path.join(PATH_PROCESSED_PARAMETERS, "mfcc_norm_stats.npz"),
+         sum=global_sum, sq_sum=global_sq_sum,
+         mean=global_mean, std=global_std)
 
-
-#first create word recognition
-
-
-#second word splitter
 
