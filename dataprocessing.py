@@ -62,7 +62,7 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
         mel_spec = librosa.feature.melspectrogram(
             y=word_audio,
             sr=SAMPLE_RATE,
-            n_fft=512,       # larger FFT for better freq resolution
+            n_fft=1024,       # larger FFT for better freq resolution
             hop_length=256,   # ~16 ms hop at 16kHz
             n_mels=80,        # higher resolution (standard in speech models)
             fmin=20,          # cut low freqs

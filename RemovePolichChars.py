@@ -21,3 +21,4 @@ def strip_polish_chars(text: str) -> str:
     without_marks = ''.join(c for c in normalized if unicodedata.category(c) != 'Mn')
     # Apply Polish-specific replacements
     return without_marks.translate(POLISH_MAP)
+
