@@ -1,5 +1,5 @@
 from iterate_dataset import iterate_dataset
-from normalization_and_sampler import normalize_audio, seconds_to_samples
+from helper_funct import normalize_audio, seconds_to_samples
 from RemovePolichChars import strip_polish_chars
 from textgrid import TextGrid
 import pandas as pd

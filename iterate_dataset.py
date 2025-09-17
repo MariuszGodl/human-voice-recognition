@@ -4,7 +4,6 @@ from textgrid import TextGrid
 from const import *
 
 
-
 def iterate_dataset(func):
     """
     Decorator to iterate over dataset -> author -> wav+TextGrid files.
@@ -28,5 +27,5 @@ def iterate_dataset(func):
                                 audio_sample, sr = librosa.load(wav_file, sr=SAMPLE_RATE)
 
                                 # call your function
-                                func(wav_file, textgrid_file, audio_sample, sr, tg, *args, **kwargs)
+                                func(author, wav_file, textgrid_file, audio_sample, sr, tg, *args, **kwargs)
     return wrapper
