@@ -2,6 +2,7 @@ from iterate_dataset import iterate_dataset
 from helper_funct import normalize_audio, seconds_to_samples
 from RemovePolichChars import strip_polish_chars
 from textgrid import TextGrid
+from dotenv import load_dotenv
 import pandas as pd
 import numpy as np
 import librosa
@@ -13,7 +14,7 @@ from const import *
 
 
 @iterate_dataset
-def get_global_parameters(wav_file, textgrid_file, audio_sample, sr, tg):
+def get_global_parameters(author, wav_file, textgrid_file, audio_sample, sr, tg):
 
     global global_sum, global_sq_sum, total_frames, k  
 
@@ -54,6 +55,7 @@ if __name__ == '__main__':
     global_sq_sum = None
     total_frames = 0
 
+    load_dotenv()
 
     get_global_parameters()             
 

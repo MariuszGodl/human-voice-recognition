@@ -1,7 +1,9 @@
 from textgrid import TextGrid
 from RemovePolichChars import strip_polish_chars
-from helper_funct import normalize_audio, seconds_to_samples, check_if_word_contains_illegal_chars
+from helper_funct import normalize_audio, seconds_to_samples, check_if_word_contains_illegal_chars, strip_endings
 from iterate_dataset import iterate_dataset
+from dotenv import load_dotenv
+from api_to_chtp import check_if_it_is_real_world
 import pandas as pd
 import numpy as np
 import librosa
@@ -16,13 +18,13 @@ from const import *
 def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
     
     global stats, mean, std
-
+    check_if_it_is_real_world('lk')
     size = len(tg[0].intervals)
     labels = [[0 for x in range(4)] for y in range(size)] 
 
     for i, interval in enumerate(tg[0].intervals):
         duration = interval.maxTime - interval.minTime
-        
+
         if duration < 0.05 or interval.mark == '':
             continue
 
@@ -31,12 +33,13 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
 
         start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
 
-        # strip endings of the words from -,
-        # think about adding chatgtp api to tell if it is accualy a polish word 
+        # think about adding chatgtp api to tell if it is accualy a polish word         
         # but rather for folder creation not for each entry, and store it for further usage names 
         # not appproved by api to classify them by hand and if necessery add redirection to diffrent folder
         # count number of used tokens to asses the $$
+
         word = strip_polish_chars(interval.mark)
+        word = strip_endings(word)
 
         #add spectrographs for better model quality
         print(textgrid_file, word)
@@ -79,6 +82,9 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
 
 
 if __name__ == '__main__':
+
+    load_dotenv()
+
     stats = np.load(os.path.join(PATH_PROCESSED_DATA, "mfcc_norm_stats.npz"))
     mean = stats["mean"]
     std = stats["std"]

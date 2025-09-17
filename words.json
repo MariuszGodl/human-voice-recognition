@@ -1,0 +1,17 @@
+{
+    "moze": {
+        "word": "moze",
+        "is_real": true,
+        "corrected_word": null
+    },
+    "kacka": {
+        "word": "kacka",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "kot": {
+        "word": "kot",
+        "is_real": true,
+        "corrected_word": null
+    }
+}
