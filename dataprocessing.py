@@ -1,5 +1,6 @@
 from textgrid import TextGrid
 from RemovePolichChars import strip_polish_chars
+from normalization_and_sampler import normalize_audio, seconds_to_samples
 import pandas as pd
 import numpy as np
 import librosa
@@ -16,14 +17,7 @@ NFFT = 512
 HOP_LENGTH = 256
 
 # add spectrographs
-def normalize_audio(audio):
-    return audio / np.max(np.abs(audio)) if np.max(np.abs(audio)) > 0 else audio
 
-
-def seconds_to_samples(start, end, sr):
-    sample_start = int(start * sr)
-    sample_end = int(end * sr)
-    return sample_start, sample_end
 
 def check_if_word_contains_illegal_chars(word):
     # allowed characters: English letters (a–z, A–Z) and maybe apostrophes/hyphens if you want
@@ -70,11 +64,11 @@ for dataset in os.listdir(PATH_RAW_DATASET):
                             if check_if_word_contains_illegal_chars(interval.mark):  
                                 continue
                             start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
-                            # strip from -
+                            # strip endings of the words from -,
                             # think about adding chatgtp api to tell if it is accualy a polish word 
                             # but rather for folder creation not for each entry, and store it for further usage names 
                             # not appproved by api to classify them by hand and if necessery add redirection to diffrent folder
-            
+                            # count number of used tokens to asses the $$
                             word = strip_polish_chars(interval.mark)
 
                             #add spectrographs for better model quality
