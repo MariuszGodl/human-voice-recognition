@@ -206,7 +206,7 @@
     },
     "zukrainizowaniu": {
         "word": "zukrainizowaniu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "racja": {
@@ -1336,7 +1336,7 @@
     },
     "p": {
         "word": "p",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "samym": {
@@ -1541,7 +1541,7 @@
     },
     "t": {
         "word": "t",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "spojrzeniu": {
@@ -1896,7 +1896,7 @@
     },
     "piwem": {
         "word": "piwem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "nasi": {
@@ -1946,7 +1946,7 @@
     },
     "m": {
         "word": "m",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "przypuszczam": {
@@ -1956,7 +1956,7 @@
     },
     "magnesem": {
         "word": "magnesem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pytam": {
@@ -2036,7 +2036,7 @@
     },
     "efektami": {
         "word": "efektami",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "takich": {
@@ -2076,7 +2076,7 @@
     },
     "grozny": {
         "word": "grozny",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "lub": {
@@ -2191,17 +2191,17 @@
     },
     "ugrupowanym": {
         "word": "ugrupowanym",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "penetrowanym": {
         "word": "penetrowanym",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rejonie": {
         "word": "rejonie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "wersji": {
@@ -2301,7 +2301,7 @@
     },
     "antenie": {
         "word": "antenie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "przekora": {
@@ -2311,7 +2311,7 @@
     },
     "gejem": {
         "word": "gejem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "czyli": {
@@ -2346,7 +2346,7 @@
     },
     "sporze": {
         "word": "sporze",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "razem": {
@@ -2366,7 +2366,7 @@
     },
     "pore": {
         "word": "pore",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "graphics": {
@@ -2536,7 +2536,7 @@
     },
     "pekinie": {
         "word": "pekinie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "powodu": {
@@ -2556,7 +2556,7 @@
     },
     "ich": {
         "word": "ich",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "przyjazd": {
@@ -2606,7 +2606,7 @@
     },
     "polan": {
         "word": "polan",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "tam": {
@@ -2776,7 +2776,7 @@
     },
     "posady": {
         "word": "posady",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "we": {
@@ -2931,7 +2931,7 @@
     },
     "innej": {
         "word": "innej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "akcje": {
@@ -2951,12 +2951,12 @@
     },
     "samorzutnie": {
         "word": "samorzutnie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "cenne": {
         "word": "cenne",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zdobycze": {
@@ -2976,7 +2976,7 @@
     },
     "konia": {
         "word": "konia",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "odkryli": {
@@ -2986,7 +2986,7 @@
     },
     "tzw": {
         "word": "tzw",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "efekt": {
@@ -3231,7 +3231,7 @@
     },
     "dziekana": {
         "word": "dziekana",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ekonomiczno-socjologicznego": {
@@ -3246,7 +3246,7 @@
     },
     "profesora": {
         "word": "profesora",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dziedzinie": {
@@ -3351,7 +3351,7 @@
     },
     "indywidualnie": {
         "word": "indywidualnie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pacjenci": {
@@ -3371,12 +3371,12 @@
     },
     "grupie": {
         "word": "grupie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pokuracyjnej": {
         "word": "pokuracyjnej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "jeden": {
@@ -3476,7 +3476,7 @@
     },
     "albert": {
         "word": "albert",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "einstein": {
@@ -3506,7 +3506,7 @@
     },
     "wila": {
         "word": "wila",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "mirzojanowa": {
@@ -3516,12 +3516,12 @@
     },
     "lwa": {
         "word": "lwa",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "fiodorowa": {
         "word": "fiodorowa",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zamian": {
@@ -3561,7 +3561,7 @@
     },
     "kodeksem": {
         "word": "kodeksem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "etycznym": {
@@ -3791,7 +3791,7 @@
     },
     "prawach": {
         "word": "prawach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "autonomiczne": {
@@ -3801,7 +3801,7 @@
     },
     "ukrainie": {
         "word": "ukrainie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rosjan": {
@@ -3861,7 +3861,7 @@
     },
     "impas": {
         "word": "impas",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "swoim": {
@@ -3976,12 +3976,12 @@
     },
     "lesbijkom": {
         "word": "lesbijkom",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "gejom": {
         "word": "gejom",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "chodzi": {
@@ -4041,7 +4041,7 @@
     },
     "kuracji": {
         "word": "kuracji",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "trzech": {
@@ -4181,7 +4181,7 @@
     },
     "sensie": {
         "word": "sensie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "konsultowanych": {
@@ -4221,7 +4221,7 @@
     },
     "uznaniowych": {
         "word": "uznaniowych",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zanim": {
@@ -4241,7 +4241,7 @@
     },
     "szampana": {
         "word": "szampana",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "drugiej": {
@@ -4256,7 +4256,7 @@
     },
     "sali": {
         "word": "sali",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ostankino": {
@@ -4291,7 +4291,7 @@
     },
     "obrad": {
         "word": "obrad",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dyskusja": {
@@ -4301,7 +4301,7 @@
     },
     "problemach": {
         "word": "problemach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "funkcjonowania": {
@@ -4321,17 +4321,17 @@
     },
     "opartej": {
         "word": "opartej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zasadach": {
         "word": "zasadach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "walki": {
         "word": "walki",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "marnotrawstwem": {
@@ -4351,12 +4351,12 @@
     },
     "letnik": {
         "word": "letnik",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "syna": {
         "word": "syna",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "serca": {
@@ -4371,7 +4371,7 @@
     },
     "radia": {
         "word": "radia",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "echo": {
@@ -4396,7 +4396,7 @@
     },
     "putina": {
         "word": "putina",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "stanowisku": {
@@ -4411,7 +4411,7 @@
     },
     "elektronicznym": {
         "word": "elektronicznym",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "akurat": {
@@ -4501,12 +4501,12 @@
     },
     "butla": {
         "word": "butla",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "helem": {
         "word": "helem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "balon": {
@@ -4621,12 +4621,12 @@
     },
     "ochroniarskiej": {
         "word": "ochroniarskiej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "r": {
         "word": "r",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "nadzwyczajnego": {
@@ -4701,7 +4701,7 @@
     },
     "praw": {
         "word": "praw",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "przesilenie": {
@@ -4751,7 +4751,7 @@
     },
     "farb": {
         "word": "farb",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "budowlanych": {
@@ -5006,7 +5006,7 @@
     },
     "coraz": {
         "word": "coraz",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "persona": {
@@ -5041,7 +5041,7 @@
     },
     "czeczenii": {
         "word": "czeczenii",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zlikwidowano": {
@@ -5141,7 +5141,7 @@
     },
     "latynoskie": {
         "word": "latynoskie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pojawili": {
@@ -5156,7 +5156,7 @@
     },
     "postawni": {
         "word": "postawni",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "spokojni": {
@@ -5271,7 +5271,7 @@
     },
     "swymi": {
         "word": "swymi",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "straszliwymi": {
@@ -5356,7 +5356,7 @@
     },
     "sensu": {
         "word": "sensu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "czym": {
@@ -5401,7 +5401,7 @@
     },
     "totalizmu": {
         "word": "totalizmu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ludzkim": {
@@ -5431,7 +5431,7 @@
     },
     "y": {
         "word": "y",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "melvoin": {
@@ -5466,17 +5466,17 @@
     },
     "supermocarstwem": {
         "word": "supermocarstwem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "chinami": {
         "word": "chinami",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "stanom": {
         "word": "stanom",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zjednoczonym": {
@@ -5506,12 +5506,12 @@
     },
     "tylu": {
         "word": "tylu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "naraz": {
         "word": "naraz",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "siebie": {
@@ -5526,7 +5526,7 @@
     },
     "organomistrza": {
         "word": "organomistrza",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "stroicielem": {
@@ -5561,7 +5561,7 @@
     },
     "kwarcu": {
         "word": "kwarcu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "odkryty": {
@@ -5601,7 +5601,7 @@
     },
     "partie": {
         "word": "partie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "oni": {
@@ -5726,12 +5726,12 @@
     },
     "delcie": {
         "word": "delcie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "missisipi": {
         "word": "missisipi",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "funkcjonuje": {
@@ -5811,7 +5811,7 @@
     },
     "radiu": {
         "word": "radiu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "telewizji": {
@@ -5881,7 +5881,7 @@
     },
     "tezy": {
         "word": "tezy",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "gospodarcze": {
@@ -5931,7 +5931,7 @@
     },
     "zje": {
         "word": "zje",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "szewczykiem": {
@@ -6051,7 +6051,7 @@
     },
     "europy": {
         "word": "europy",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "debacie": {
@@ -6101,7 +6101,7 @@
     },
     "buena": {
         "word": "buena",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "vista": {
@@ -6141,7 +6141,7 @@
     },
     "europie": {
         "word": "europie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zarazem": {
@@ -6151,7 +6151,7 @@
     },
     "swe": {
         "word": "swe",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "publikacje": {
@@ -6381,7 +6381,7 @@
     },
     "medalem": {
         "word": "medalem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "komisji": {
@@ -6401,7 +6401,7 @@
     },
     "chwali": {
         "word": "chwali",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "informuje": {
@@ -6436,7 +6436,7 @@
     },
     "centralizmu": {
         "word": "centralizmu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "systemie": {
@@ -6451,7 +6451,7 @@
     },
     "etnicznie": {
         "word": "etnicznie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "jednorodna": {
@@ -6481,12 +6481,12 @@
     },
     "komediami": {
         "word": "komediami",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "tragediami": {
         "word": "tragediami",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pierestrojkowe": {
@@ -6521,7 +6521,7 @@
     },
     "odnajdywanie": {
         "word": "odnajdywanie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "problemy": {
@@ -6551,7 +6551,7 @@
     },
     "sarinu": {
         "word": "sarinu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "walizkowej": {
@@ -6561,7 +6561,7 @@
     },
     "bomby": {
         "word": "bomby",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "izby": {
@@ -6571,7 +6571,7 @@
     },
     "obrachunkowej": {
         "word": "obrachunkowej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zwolniono": {
@@ -6581,7 +6581,7 @@
     },
     "publicznym": {
         "word": "publicznym",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "aparatu": {
@@ -6601,7 +6601,7 @@
     },
     "impulsy": {
         "word": "impulsy",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "praca": {
@@ -6651,7 +6651,7 @@
     },
     "ponurej": {
         "word": "ponurej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "perspektywy": {
@@ -6706,7 +6706,7 @@
     },
     "istocie": {
         "word": "istocie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "cnoty": {
@@ -6841,7 +6841,7 @@
     },
     "wychylona": {
         "word": "wychylona",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "polscy": {
@@ -6856,7 +6856,7 @@
     },
     "winni": {
         "word": "winni",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "najszerszej": {
@@ -6896,12 +6896,12 @@
     },
     "makbeta": {
         "word": "makbeta",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "bojach": {
         "word": "bojach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "prawnych": {
@@ -6926,7 +6926,7 @@
     },
     "swastyk": {
         "word": "swastyk",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "mojej": {
@@ -6961,7 +6961,7 @@
     },
     "swego": {
         "word": "swego",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "samolotu": {
@@ -6991,7 +6991,7 @@
     },
     "megafirmie": {
         "word": "megafirmie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "kilkuset": {
@@ -7051,7 +7051,7 @@
     },
     "hity": {
         "word": "hity",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "kinowe": {
@@ -7106,7 +7106,7 @@
     },
     "wylatuje": {
         "word": "wylatuje",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "falandysz": {
@@ -7161,7 +7161,7 @@
     },
     "tchu": {
         "word": "tchu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "jeana-luca": {
@@ -7181,7 +7181,7 @@
     },
     "belmonda": {
         "word": "belmonda",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pachnie": {
@@ -7276,7 +7276,7 @@
     },
     "kazaniach": {
         "word": "kazaniach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "programach": {
@@ -7301,17 +7301,17 @@
     },
     "raja": {
         "word": "raja",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zawale": {
         "word": "zawale",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "matce": {
         "word": "matce",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "juszczenki": {
@@ -7361,7 +7361,7 @@
     },
     "plecach": {
         "word": "plecach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "kordialnie": {
@@ -7436,7 +7436,7 @@
     },
     "ku": {
         "word": "ku",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "czci": {
@@ -7501,7 +7501,7 @@
     },
     "sprzed": {
         "word": "sprzed",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "wojny": {
@@ -7551,7 +7551,7 @@
     },
     "dumie": {
         "word": "dumie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "premiera": {
@@ -7561,12 +7561,12 @@
     },
     "ewidentnego": {
         "word": "ewidentnego",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "braku": {
         "word": "braku",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "moskiewski": {
@@ -7721,7 +7721,7 @@
     },
     "ruinach": {
         "word": "ruinach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "mieszkania": {
@@ -7731,7 +7731,7 @@
     },
     "zuli": {
         "word": "zuli",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "jubileusz": {
@@ -7801,7 +7801,7 @@
     },
     "godna": {
         "word": "godna",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ekstrawagancja": {
@@ -8006,7 +8006,7 @@
     },
     "pokuszenije": {
         "word": "pokuszenije",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rossiju": {
@@ -8076,7 +8076,7 @@
     },
     "fundamentalizm": {
         "word": "fundamentalizm",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ewidentnie": {
@@ -8166,12 +8166,12 @@
     },
     "kuzniecowa": {
         "word": "kuzniecowa",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pozew": {
         "word": "pozew",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "niesprawiedliwe": {
@@ -8286,7 +8286,7 @@
     },
     "pozwu": {
         "word": "pozwu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "natychmiastowym": {
@@ -8316,7 +8316,7 @@
     },
     "ministerstwie": {
         "word": "ministerstwie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "konferencjach": {
@@ -8361,7 +8361,7 @@
     },
     "aferze": {
         "word": "aferze",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "karmelitankami": {
@@ -8376,7 +8376,7 @@
     },
     "porcelany": {
         "word": "porcelany",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dzisiejsze": {
@@ -8396,7 +8396,7 @@
     },
     "roli": {
         "word": "roli",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "antykomunistycznym": {
@@ -8441,7 +8441,7 @@
     },
     "interesie": {
         "word": "interesie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "umacnianie": {
@@ -8491,7 +8491,7 @@
     },
     "cambridge": {
         "word": "cambridge",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "certificate": {
@@ -8546,7 +8546,7 @@
     },
     "anten": {
         "word": "anten",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "cech": {
@@ -8576,7 +8576,7 @@
     },
     "buntem": {
         "word": "buntem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "przekonali": {
@@ -8626,12 +8626,12 @@
     },
     "skali": {
         "word": "skali",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "wyizolowanie": {
         "word": "wyizolowanie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "endotoksyny": {
@@ -8836,7 +8836,7 @@
     },
     "moich": {
         "word": "moich",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "znajomych": {
@@ -8851,7 +8851,7 @@
     },
     "nagraniach": {
         "word": "nagraniach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rockowych": {
@@ -8866,7 +8866,7 @@
     },
     "departamentu": {
         "word": "departamentu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "legislacyjnym": {
@@ -8881,8 +8881,8 @@
     },
     "korporacyi": {
         "word": "korporacyi",
-        "is_real": false,
-        "corrected_word": null
+        "is_real": true,
+        "corrected_word": "korporacji"
     },
     "stolarzy": {
         "word": "stolarzy",
@@ -8936,7 +8936,7 @@
     },
     "nimi": {
         "word": "nimi",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "potrzeby": {
@@ -8971,7 +8971,7 @@
     },
     "rozliczne": {
         "word": "rozliczne",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "umowy": {
@@ -8981,7 +8981,7 @@
     },
     "naoczni": {
         "word": "naoczni",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "granicy": {
@@ -9016,7 +9016,7 @@
     },
     "apologia": {
         "word": "apologia",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "targowicy": {
@@ -9101,7 +9101,7 @@
     },
     "ranem": {
         "word": "ranem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "liga": {
@@ -9111,7 +9111,7 @@
     },
     "salonach": {
         "word": "salonach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zadomowiona": {
@@ -9166,7 +9166,7 @@
     },
     "putin": {
         "word": "putin",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rekompensaty": {
@@ -9211,7 +9211,7 @@
     },
     "gustu": {
         "word": "gustu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "historycznego": {
@@ -9266,7 +9266,7 @@
     },
     "scen": {
         "word": "scen",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dodawanie": {
@@ -9301,7 +9301,7 @@
     },
     "cele": {
         "word": "cele",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "seksualnych": {
@@ -9326,7 +9326,7 @@
     },
     "interesy": {
         "word": "interesy",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "wyszukiwanie": {
@@ -9341,7 +9341,7 @@
     },
     "czasopism": {
         "word": "czasopism",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dziedzin": {
@@ -9426,7 +9426,7 @@
     },
     "udawani": {
         "word": "udawani",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "elementem": {
@@ -9451,12 +9451,12 @@
     },
     "xvi": {
         "word": "xvi",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "trybunalska": {
         "word": "trybunalska",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "szary": {
@@ -9491,7 +9491,7 @@
     },
     "takiemu": {
         "word": "takiemu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "twierdzeniu": {
@@ -9541,12 +9541,12 @@
     },
     "geopolityki": {
         "word": "geopolityki",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "geoideologii": {
         "word": "geoideologii",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "podobnie": {
@@ -9561,17 +9561,17 @@
     },
     "kaczym": {
         "word": "kaczym",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "chodem": {
         "word": "chodem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "rangi": {
         "word": "rangi",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "przyrody": {
@@ -9686,7 +9686,7 @@
     },
     "ramach": {
         "word": "ramach",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "nauczyciela": {
@@ -9716,7 +9716,7 @@
     },
     "cykle": {
         "word": "cykle",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "klas": {
@@ -9731,7 +9731,7 @@
     },
     "pozbyto": {
         "word": "pozbyto",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "infrastruktura": {
@@ -9771,7 +9771,7 @@
     },
     "perfectu": {
         "word": "perfectu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "milion": {
@@ -9801,7 +9801,7 @@
     },
     "poczytnych": {
         "word": "poczytnych",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "periodykach": {
@@ -9926,7 +9926,7 @@
     },
     "was": {
         "word": "was",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "dyskutowano": {
@@ -9971,7 +9971,7 @@
     },
     "geoideologicznej": {
         "word": "geoideologicznej",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zdawaliby": {
@@ -9991,7 +9991,7 @@
     },
     "zapatrywania": {
         "word": "zapatrywania",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "uczestnicy": {
@@ -10016,7 +10016,7 @@
     },
     "momentu": {
         "word": "momentu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "embrionu": {
@@ -10036,7 +10036,7 @@
     },
     "mundurze": {
         "word": "mundurze",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "wrogowi": {
@@ -10046,7 +10046,7 @@
     },
     "clintonowi": {
         "word": "clintonowi",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zarzucono": {
@@ -10146,7 +10146,7 @@
     },
     "k": {
         "word": "k",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "ciekawym": {
@@ -10186,7 +10186,7 @@
     },
     "d": {
         "word": "d",
-        "is_real": true,
+        "is_real": false,
         "corrected_word": null
     },
     "promotorem": {
@@ -10311,7 +10311,7 @@
     },
     "postoju": {
         "word": "postoju",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "konie": {
@@ -10321,17 +10321,17 @@
     },
     "celu": {
         "word": "celu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "napojenia": {
         "word": "napojenia",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "pobliskim": {
         "word": "pobliskim",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "stawku": {
@@ -10351,7 +10351,7 @@
     },
     "komisarskie": {
         "word": "komisarskie",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "cel": {
@@ -10371,7 +10371,7 @@
     },
     "sosen": {
         "word": "sosen",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "szumie": {
@@ -10406,7 +10406,7 @@
     },
     "zrywa": {
         "word": "zrywa",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "brzegi": {
@@ -10416,7 +10416,7 @@
     },
     "wlewa": {
         "word": "wlewa",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "niziny": {
@@ -10426,7 +10426,7 @@
     },
     "dzikim": {
         "word": "dzikim",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "piaskiem": {
@@ -10471,7 +10471,7 @@
     },
     "spacerowali": {
         "word": "spacerowali",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "hotelowych": {
@@ -10536,7 +10536,7 @@
     },
     "ojcu": {
         "word": "ojcu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "ach": {
@@ -10641,7 +10641,7 @@
     },
     "chirurgiem": {
         "word": "chirurgiem",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "salonu": {
@@ -10656,7 +10656,7 @@
     },
     "obicia": {
         "word": "obicia",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "firanki": {
@@ -10676,7 +10676,7 @@
     },
     "trudu": {
         "word": "trudu",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "jakie": {
@@ -10726,7 +10726,7 @@
     },
     "sybirze": {
         "word": "sybirze",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "sieci": {
@@ -10781,7 +10781,7 @@
     },
     "mrowisku": {
         "word": "mrowisku",
-        "is_real": false,
+        "is_real": true,
         "corrected_word": null
     },
     "zastrzyk": {
@@ -10796,6 +10796,116 @@
     },
     "melodyjnym": {
         "word": "melodyjnym",
+        "is_real": true,
+        "corrected_word": null
+    },
+    "cysty": {
+        "word": "cysty",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "pta": {
+        "word": "pta",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "pnin": {
+        "word": "rpnin",
+        "is_real": false,
+        "corrected_word": null
+    },  
+    "xix": {
+        "word": "xix",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "wny": {
+        "word": "wny",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "ub": {
+        "word": "ub",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "tj": {
+        "word": "tj",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "the": {
+        "word": "the",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "s": {
+        "word": "s",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "b": {
+        "word": "b",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "c": {
+        "word": "c",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "e": {
+        "word": "e",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "f": {
+        "word": "f",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "g": {
+        "word": "g",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "h": {
+        "word": "h",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "l": {
+        "word": "l",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "n": {
+        "word": "n",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "x": {
+        "word": "x",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "sy": {
+        "word": "sy",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "li": {
+        "word": "li",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "ni": {
+        "word": "ni",
+        "is_real": false,
+        "corrected_word": null
+    },
+    "s": {
+        "word": "s",
         "is_real": false,
         "corrected_word": null
     }

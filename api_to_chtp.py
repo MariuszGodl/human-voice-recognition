@@ -38,7 +38,7 @@ def count_tokens(messages, total_response_tokens,  model="gpt-4",):
 
 
 
-def check_if_it_is_real_word(word, language='Polish'):
+def gtp_check_if_it_is_real_word(word, language='Polish'):
     """
     Checks if a word exists in the specified language using ChatGPT.
     Returns True if it exists, False otherwise.
@@ -56,53 +56,56 @@ def check_if_it_is_real_word(word, language='Polish'):
     if word in data:
         return data[word]["is_real"], data[word]["corrected_word"]
 
-    openai.api_key = os.getenv("OPENAI_API_KEY")
+    print(word)
+    return True, None
+    # openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    prompt = (
-        f"Does the word '{word}' exist in {language}? Ignore Polish characters (e.g., 'moze' instead of 'może')."
-        " Words with missing letters (e.g., 'kacka') should be 'no'. Answer only 'yes' or 'no'."
-    )
+    # prompt = (
+    #     f"Does the word '{word}' exist in {language}? Ignore Polish characters (e.g., 'moze' instead of 'może')."
+    #     " Words with missing letters (e.g., 'kacka') should be 'no'. Answer only 'yes' or 'no'."
+    # )
 
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": prompt}
-    ]
+    # messages = [
+    #     {"role": "system", "content": "You are a helpful assistant."},
+    #     {"role": "user", "content": prompt}
+    # ]
 
-    response = openai.chat.completions.create(
-        model="gpt-4",
-        messages=messages,
-        max_tokens=3,
-        temperature=0
-    )
+    # response = openai.chat.completions.create(
+    #     model="gpt-4",
+    #     messages=messages,
+    #     max_tokens=3,
+    #     temperature=0
+    # )
 
-    count_tokens(messages, response.usage.total_tokens, model="gpt-4")
+    # count_tokens(messages, response.usage.total_tokens, model="gpt-4")
 
 
 
-    # Access content as an attribute, not like a dict
-    answer = response.choices[0].message.content.strip().lower()
+    # # Access content as an attribute, not like a dict
+    # answer = response.choices[0].message.content.strip().lower()
 
-    #append the word into words.jeson with corresponding bool
+    # #append the word into words.jeson with corresponding bool
 
-    is_real = answer == "yes"
+    # is_real = answer == "yes"
 
-    # Load existing JSON data
+    # # Load existing JSON data
 
-    if os.path.exists(json_file):
-        with open(json_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    else:
-        data = {}
+    # if os.path.exists(json_file):
+    #     with open(json_file, "r", encoding="utf-8") as f:
+    #         data = json.load(f)
+    # else:
+    #     data = {}
 
-    # Update JSON with new word
-    data[word] = {
-        "word": word,
-        "is_real": is_real,
-        "corrected_word": None
-    }
+    # # Update JSON with new word
+    # data[word] = {
+    #     "word": word,
+    #     "is_real": is_real,
+    #     "corrected_word": None
+    # }
 
-    # Save back to file
-    with open(json_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+    # # Save back to file
+    # with open(json_file, "w", encoding="utf-8") as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=4)
 
-    return is_real, None
+    # return is_real, None
+

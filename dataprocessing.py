@@ -3,7 +3,7 @@ from RemovePolichChars import strip_polish_chars
 from helper_funct import normalize_audio, seconds_to_samples, check_if_word_contains_illegal_chars, strip_endings
 from iterate_dataset import iterate_dataset
 from dotenv import load_dotenv
-from api_to_chtp import check_if_it_is_real_word
+from api_to_chtp import gtp_check_if_it_is_real_word
 import pandas as pd
 import numpy as np
 import librosa
@@ -35,19 +35,19 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
         word = strip_polish_chars(interval.mark)
         word = strip_endings(word)
 
-        # is_real, corrected_word = check_if_it_is_real_word(word, 'Polish')
+        is_real, corrected_word = gtp_check_if_it_is_real_word(word, 'Polish')
 
-        # if not is_real:
-        #     if corrected_word != None:
-        #         word = corrected_word
-        #     else:
-        #         continue
+        if not is_real:
+            if corrected_word != None:
+                word = corrected_word
+            else:
+                continue
 
 
         #add spectrographs for better model quality
 
 
-        print(textgrid_file, word)
+        #print(textgrid_file, word)
         word_audio = audio_sample[start:end]
         if len(word_audio) < NFFT: 
             continue
@@ -62,7 +62,7 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
         mel_spec = librosa.feature.melspectrogram(
             y=word_audio,
             sr=SAMPLE_RATE,
-            n_fft=1024,       # larger FFT for better freq resolution
+            n_fft=512,       # larger FFT for better freq resolution
             hop_length=256,   # ~16 ms hop at 16kHz
             n_mels=80,        # higher resolution (standard in speech models)
             fmin=20,          # cut low freqs

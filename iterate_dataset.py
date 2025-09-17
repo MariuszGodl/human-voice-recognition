@@ -26,6 +26,5 @@ def iterate_dataset(func):
                                 tg = TextGrid.fromFile(textgrid_file)
                                 audio_sample, sr = librosa.load(wav_file, sr=SAMPLE_RATE)
 
-                                # call your function
                                 func(author, wav_file, textgrid_file, audio_sample, sr, tg, *args, **kwargs)
     return wrapper

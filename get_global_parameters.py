@@ -35,7 +35,6 @@ def get_global_parameters(author, wav_file, textgrid_file, audio_sample, sr, tg)
         
         mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13, n_fft=NFFT)
 
-        # update global sums
         if global_sum is None:
             global_sum = np.sum(mfcc, axis=1)
             global_sq_sum = np.sum(mfcc ** 2, axis=1)
