@@ -1,9 +1,9 @@
 import os
 import librosa
 from textgrid import TextGrid
+from const import *
 
-PATH_RAW_DATASET = 'data/raw/'
-SAMPLE_RATE = 16000 # Hz
+
 
 def iterate_dataset(func):
     """
