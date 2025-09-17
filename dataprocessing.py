@@ -3,7 +3,7 @@ from RemovePolichChars import strip_polish_chars
 from helper_funct import normalize_audio, seconds_to_samples, check_if_word_contains_illegal_chars, strip_endings
 from iterate_dataset import iterate_dataset
 from dotenv import load_dotenv
-from api_to_chtp import check_if_it_is_real_world
+from api_to_chtp import check_if_it_is_real_word
 import pandas as pd
 import numpy as np
 import librosa
@@ -18,7 +18,6 @@ from const import *
 def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
     
     global stats, mean, std
-    check_if_it_is_real_world('lk')
     size = len(tg[0].intervals)
     labels = [[0 for x in range(4)] for y in range(size)] 
 
@@ -33,15 +32,21 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
 
         start, end = seconds_to_samples(interval.minTime, interval.maxTime, SAMPLE_RATE)
 
-        # think about adding chatgtp api to tell if it is accualy a polish word         
-        # but rather for folder creation not for each entry, and store it for further usage names 
-        # not appproved by api to classify them by hand and if necessery add redirection to diffrent folder
-        # count number of used tokens to asses the $$
-
         word = strip_polish_chars(interval.mark)
         word = strip_endings(word)
 
+        # is_real, corrected_word = check_if_it_is_real_word(word, 'Polish')
+
+        # if not is_real:
+        #     if corrected_word != None:
+        #         word = corrected_word
+        #     else:
+        #         continue
+
+
         #add spectrographs for better model quality
+
+
         print(textgrid_file, word)
         word_audio = audio_sample[start:end]
         if len(word_audio) < NFFT: 
@@ -52,6 +57,24 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
         mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13, n_fft=NFFT)
         mfcc_norm = (mfcc - mean[:, None]) / std[:, None]
         mfcc_tensor = torch.tensor(mfcc_norm)
+
+
+        mel_spec = librosa.feature.melspectrogram(
+            y=word_audio,
+            sr=SAMPLE_RATE,
+            n_fft=1024,       # larger FFT for better freq resolution
+            hop_length=256,   # ~16 ms hop at 16kHz
+            n_mels=80,        # higher resolution (standard in speech models)
+            fmin=20,          # cut low freqs
+            fmax=8000         # limit to speech band (for 16kHz audio)
+        )
+
+        # Convert to log scale (better for neural nets)
+        log_mel_spec = librosa.power_to_db(mel_spec, ref=np.max)
+
+        # Normalize
+        log_mel_spec_norm = (log_mel_spec - np.mean(log_mel_spec)) / np.std(log_mel_spec)
+        log_mel_tensor = torch.tensor(log_mel_spec_norm)
 
         word_folder_path = os.path.join(PATH_PROCESSED_DATA, 'words', word)
         nr_of_occurances = 0
@@ -67,7 +90,13 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
             os.makedirs(word_folder_path)
             tensor_file_name = os.path.join(word_folder_path, tag)
 
-        torch.save(mfcc_tensor, tensor_file_name)
+
+        features = {
+            "mfcc": mfcc_tensor,
+            "mel_spec": log_mel_tensor
+        }
+
+        torch.save(features, tensor_file_name)
 
         labels[i][0]=tag
         labels[i][1]=word
