@@ -14,7 +14,7 @@ import os
 from time import sleep
 from const import *
 
-
+NFFT = 512
 def process_audio(word_audio, word, labels, duration, author) -> string:
     mfcc = librosa.feature.mfcc(y=word_audio, sr=SAMPLE_RATE, n_mfcc=13, n_fft=NFFT)
     mfcc_norm = (mfcc - mean[:, None]) / std[:, None]
@@ -111,7 +111,6 @@ def process_data(author, wav_file, textgrid_file, audio_sample, sr, tg):
 if __name__ == '__main__':
 
     load_dotenv()
-
     stats = np.load(os.path.join(PATH_PROCESSED_DATA, "mfcc_norm_stats.npz"))
     mean = stats["mean"]
     std = stats["std"]

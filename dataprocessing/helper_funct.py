@@ -21,7 +21,6 @@ def check_if_word_contains_illegal_chars(word):
     return False  # all characters are valid
 
 
-
 FORBIDDEN_ENDINGS = [
     '-', '_', '/', '=', '+', '.', ',', ';', ':', '!', '?',
     '(', ')', '[', ']', '{', '}', '<', '>', '"', "'", '|',

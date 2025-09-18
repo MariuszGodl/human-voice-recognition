@@ -12,7 +12,7 @@ from torch.nn.utils.rnn import pad_sequence
 
 TEST_SIZE = 0.3
 PATH_PROCESSED_DATA = 'data/processed_512/'
-MODEL_PATH = 'model/models/simple_speech_model_30.pth'
+MODEL_PATH = None#'model/models/simple_speech_model_30.pth'
 
 
 def collate_fn(batch):
