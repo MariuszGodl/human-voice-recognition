@@ -11,7 +11,7 @@ import torch.optim as optim
 from torch.nn.utils.rnn import pad_sequence
 
 TEST_SIZE = 0.3
-PATH_PROCESSED_DATA = 'data/processed_512/'
+PATH_PROCESSED_DATA = 'data/processed/'
 MODEL_PATH = None#'model/models/simple_speech_model_30.pth'
 
 
@@ -119,6 +119,6 @@ for epoch in range(100):
           f"Val Loss={avg_val_loss:.4f}, Val Acc={val_acc:.2f}%")
 
     # After training 
-    MODEL_PATH = "model/models/" +  + str(epoch + 1) + "_simple_speech_model.pth"
+    MODEL_PATH = "model/models/" +  + str(epoch + 1) + f"_{val_acc:.2f}_simple_speech_model.pth"
     torch.save(model.state_dict(), MODEL_PATH) 
     print(f"Model saved to {MODEL_PATH}") 
