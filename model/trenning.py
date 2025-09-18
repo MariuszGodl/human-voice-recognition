@@ -8,11 +8,12 @@ from model import SimpleSpeechModel
 import torch.nn as nn
 import torch
 import torch.optim as optim
+from torch.nn.utils.rnn import pad_sequence
 
 TEST_SIZE = 0.3
-PATH_PROCESSED_DATA = 'data/processed/'
+PATH_PROCESSED_DATA = 'data/processed_512/'
+MODEL_PATH = 'model/models/simple_speech_model_30.pth'
 
-from torch.nn.utils.rnn import pad_sequence
 
 def collate_fn(batch):
     xs, ys = zip(*batch)
@@ -39,20 +40,18 @@ labels_df = pd.read_csv(os.path.join( PATH_PROCESSED_DATA, 'labels.csv'), sep='|
 le = LabelEncoder()
 labels_df['word_id'] = le.fit_transform(labels_df['word'])
 
-train_df, val_df = train_test_split(labels_df, test_size=0.2, stratify=labels_df["word_id"], random_state=42)
-
-# train_dataset = SpeechDataset(train_df, PATH_PROCESSED_DATA, le)
-# val_dataset = SpeechDataset(val_df, PATH_PROCESSED_DATA, le)
-
-
-# train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, collate_fn=collate_fn)
-# val_loader = DataLoader(val_dataset, batch_size=32, collate_fn=collate_fn)
-
 full_dataset = SpeechDataset(labels_df, PATH_PROCESSED_DATA, le)
 
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = SimpleSpeechModel(n_classes=len(le.classes_)).to(device)
+
+model = SimpleSpeechModel(n_classes=len(le.classes_))
+
+if MODEL_PATH  == None:
+    model = model.to(device)
+else:
+    model.load_state_dict(torch.load(MODEL_PATH))
+    model.to(device)
+    model.eval()
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
@@ -120,6 +119,6 @@ for epoch in range(100):
           f"Val Loss={avg_val_loss:.4f}, Val Acc={val_acc:.2f}%")
 
     # After training 
-    MODEL_PATH = "models/simple_speech_model.pth" + str(epoch)
+    MODEL_PATH = "model/models/" +  + str(epoch + 1) + "_simple_speech_model.pth"
     torch.save(model.state_dict(), MODEL_PATH) 
     print(f"Model saved to {MODEL_PATH}") 
